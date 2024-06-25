@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Profesional</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero {
+    background: url('/public/images/library.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+}
+
+.cta-button {
+    background: #ff6600;
+    color: #fff;
+    padding: 1em 2em;
+    text-decoration: none;
+    margin-top: 1em;
+    display: inline-block;
+}
+
+section {
+    padding: 2em;
+}
+
+#about, #services, #cta, #contact {
+    background: #f9f9f9;
+    margin-top: -4px; /* To ensure no space between sections */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer nav ul {
+    justify-content: center;
+}
+
+footer nav ul li {
+    margin-left: 1em;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    height: 120px;
+  }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <img src="images/Logo.png" alt="Logo" class="logo">
+            </a>
+            <ul>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <a href="#" class="logo">Logo</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Bienvenido a Nuestra Landing Page</h1>
+            <p>La mejor solución para tus necesidades</p>
+            <a href="#cta" class="cta-button">Llámanos</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una empresa dedicada a...</p>
+    </section>
+
+    <section id="services">
+        <h2>Nuestros Servicios</h2>
+        <article class="service">
+            <h3>Servicio 1</h3>
+            <p>Descripción del servicio 1.</p>
+        </article>
+        <article class="service">
+            <h3>Servicio 2</h3>
+            <p>Descripción del servicio 2.</p>
+        </article>
+        <article class="service">
+            <h3>Servicio 3</h3>
+            <p>Descripción del servicio 3.</p>
+        </article>
+    </section>
+
+    <section id="cta">
+        <h2>¿Listo para comenzar?</h2>
+        <p>Contacta con nosotros hoy mismo.</p>
+        <a href="#contact" class="cta-button">Contáctanos</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form action="submit-form.php" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nombre de la Empresa. Todos los derechos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

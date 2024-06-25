@@ -1,0 +1,62 @@
+:root {
+    /* Primary colors */
+    --md-sys-color-primary: #e4002b; /* P-40 */
+    --md-sys-color-primary-container: #FFF8F7; /* P-90 */
+  
+    /* Secondary colors */
+    --md-sys-color-secondary: #8D4B49; /* S-40 */
+    --md-sys-color-secondary-container: #FFF0EF; /* S-90 */
+  
+    /* Tertiary colors */
+    --md-sys-color-tertiary: #534342; /* T-40 */
+    --md-sys-color-tertiary-container: #F0DEDD; /* T-90 */
+  
+    /* Error colors */
+    --md-sys-color-error: #BA1A1A; /* E-40 */
+    --md-sys-color-error-container: #FFDAD6; /* E-90 */
+  
+    /* On colors */
+    --md-sys-color-on-primary: #FFFFFF; /* P-100 */
+    --md-sys-color-on-secondary: #FFFFFF; /* S-100 */
+    --md-sys-color-on-tertiary: #FFFFFF; /* T-100 */
+    --md-sys-color-on-error: #FFFFFF; /* E-100 */
+  
+    /* Background and Surface colors */
+    --md-sys-color-background: #FFFFFF; /* N-98 */
+    --md-sys-color-surface: #FAFAFA; /* N-98 */
+    --md-sys-color-surface-dim: #F5F5F5; /* N-87 */
+    --md-sys-color-surface-bright: #FFFFFF; /* N-98 */
+  
+    /* Outline color */
+    --md-sys-color-outline: #BDBDBD; /* NV-50 */
+  
+    /* Additional colors */
+    --md-sys-color-inverse-surface: #303030; /* N-20 */
+    --md-sys-color-inverse-on-surface: #FAFAFA; /* N-95 */
+    --md-sys-color-inverse-primary: #006ab0; /* P-80 */
+  
+    /* Container colors */
+    --md-sys-color-surface-container-lowest: #FFFFFF; /* N-100 */
+    --md-sys-color-surface-container-low: #F0F0F0; /* N-96 */
+    --md-sys-color-surface-container: #E0E0E0; /* N-94 */
+    --md-sys-color-surface-container-high: #C0C0C0; /* N-92 */
+    --md-sys-color-surface-container-highest: #A0A0A0; /* N-90 */
+  
+    /* On surface colors */
+    --md-sys-color-on-surface: #000000; /* N-10 */
+    --md-sys-color-on-surface-variant: #757575; /* NV-30 */
+  
+    /* Scrim and Shadow colors */
+    --md-sys-color-scrim: #000000; /* N-0 */
+    --md-sys-color-shadow: #000000; /* N-0 */
+
+  /* Component tokens */
+  --md-secondary-tab-container-color:transparent;
+  --md-secondary-tab-color:var(--md-sys-color-on-primary);
+  --md-secondary-tab-hover-icon-color: var(--md-sys-color-primary);
+  --md-secondary-tab-active-indicator-color	:var(--md-sys-color-primary);
+  --md-text-button-label-text-color:var(--md-sys-color-on-surface-variant);
+
+  
+  }
+  

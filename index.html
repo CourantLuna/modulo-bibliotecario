@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo Bibliotecario</title>
+  <link rel="stylesheet" href="./public/css/styles.css">
+  <link rel="stylesheet" href="./public/css/theme.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "https://esm.run/@material/web/"
+      }
+    }
+  </script>
+  <script type="module">
+    import '@material/web/all.js';
+    import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+  </script>
+</head>
+<body>
+    <!-- Encabezado principal -->
+
+    <header>
+      <nav>
+        <a href="index.html" class="home-button">
+          <img src="./public/images/Logo.png" alt="Logo" class="logo">
+        </a>
+
+        <md-tabs>
+            <md-secondary-tab>
+              <md-icon>library_books</md-icon>Catálogo
+            </md-secondary-tab>
+            <md-secondary-tab>
+              <md-icon>meeting_room</md-icon>Espacios
+            </md-secondary-tab>
+            <md-secondary-tab>
+              <md-icon>school</md-icon>Capacitación
+            </md-secondary-tab>
+            <md-secondary-tab>
+              <md-icon>settings</md-icon>Servicios
+            </md-secondary-tab>
+        </md-tabs>
+                
+        <md-secondary-tab id="login">
+          <md-icon>login</md-icon>Iniciar Sesión
+          <!--<md-icon>person</md-icon>Perfil-->
+        </md-secondary-tab>
+
+   
+      </nav>            
+    </header>
+  
+    <main>
+      <!-- Sección de héroe -->
+      <section id="hero">
+        <div class="hero-content">
+          <div class="md-typescale-display-medium">¿Qué tienes en mente el día de hoy?</div>
+          <div class="surface surface-1 search-bar">
+            <md-elevation></md-elevation>
+            <md-icon-button><md-icon>filter_alt</md-icon></md-icon-button>
+            <input type="search" id="input-search" name="input-search" placeholder="Un libro cualquiera primera edicion"/>      
+            <md-icon-button><md-icon>search</md-icon></md-icon-button>
+            
+          </div>
+        </div>
+      </section>
+
+      <section id="servicio-1">
+        <div class="surface servicio-surface row">
+          <md-elevation></md-elevation>
+          <div class="servicio-1-1 column">
+            <div class="md-typescale-headline-large" style="margin-bottom: 45px;">¿QUÉ NOS HACE FALTA?</div>
+            <md-filled-icon-button>
+              <md-icon style="margin-right: 5px;" >add_shopping_cart</md-icon>Sugerir compra
+            </md-filled-icon-button>
+          </div>
+          <div class="servicio-1-2 column">
+            <div class="md-typescale-headline-large">DISPONEMOS DE...</div>
+            <div class="servicio-1-2-1 row ">
+              <div class="mini-card surface">
+                <md-elevation></md-elevation>
+                <div class="card-icon">
+                  <img src="./public/images/recursos digitales.svg" width="80px"/>
+               </div>
+                <div class="card-content">
+                    <div class="card-number">35,718</div>
+                    <div class="card-text">Recursos Digitales</div>
+                </div>
+              </div>
+              <div class="mini-card surface">
+                <md-elevation></md-elevation>
+                <div class="card-icon">
+                  <img src="./public/images/recursos fisicos.svg" width="80px"/>
+               </div>
+                <div class="card-content">
+                    <div class="card-number">27,417</div>
+                    <div class="card-text">Recursos Impresos</div>
+                </div>
+              </div>
+              <div class="mini-card surface">
+                <md-elevation></md-elevation>
+                <div class="card-icon">
+                  <img src="./public/images/espacios_estudio.svg" width="80px"/>
+               </div>
+                <div class="card-content">
+                    <div class="card-number">45</div>
+                    <div class="card-text">Espacios de Estudio</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="nuevas-adquisiciones">
+        <div class="surface adquisiciones-surface row">
+          <md-elevation></md-elevation>
+          <div class="adquisiciones-1 column">
+            <div class="md-typescale-headline-large">NUEVAS ADQUISICIONES</div>
+            <md-filled-icon-button>
+              <md-icon style="margin-right: 5px;" >add</md-icon>Ver lista completa  
+            </md-filled-icon-button>
+          </div>
+          <div class="adquisiciones-2 column">
+            <div class="adquisiciones-2-1 row">
+              <p>carrusel de cards</p>
+            </div>
+            <md-slider></md-slider>
+            
+          </div>
+
+        </div>
+      </section>
+
+      <div class="mdc-typography">
+        <body>
+          <div class="md-typescale-display-large">Display Large</div>
+          <div class="md-typescale-display-medium">Display Medium</div>
+          <div class="md-typescale-display-small">Display Small</div>
+          <div class="md-typescale-headline-large">Headline Large</div>
+          <div class="md-typescale-headline-medium">Headline Medium</div>
+          <div class="md-typescale-headline-small">Headline Small</div>
+          <div class="md-typescale-title-large">Title Large</div>
+          <div class="md-typescale-title-medium">Title Medium</div>
+          <div class="md-typescale-title-small">Title Small</div>
+          <div class="md-typescale-label-large">Label Large</div>
+          <div class="md-typescale-label-medium">Label Medium</div>
+          <div class="md-typescale-label-small">Label Small</div>
+          <div class="md-typescale-body-large">Body Large</div>
+          <div class="md-typescale-body-medium">Body Medium</div>
+          <div class="md-typescale-body-small">Body Small</div>
+      </body>
+    </div>
+
+
+      
+    </main>
+
+</body>
+</html>
