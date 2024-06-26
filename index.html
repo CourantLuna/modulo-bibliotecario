@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Módulo Bibliotecario</title>
   <link rel="stylesheet" href="./public/css/styles.css">
+  <link rel="stylesheet" href="./public/css/card-book.css">
   <link rel="stylesheet" href="./public/css/theme.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
   <script type="importmap">
     {
       "imports": {
@@ -22,6 +24,11 @@
 
     document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
   </script>
+
+<script type="module" src="public/js/card-book-component.js" defer></script>
+<script type="module" src="public/js/carrusel.js" defer></script>
+
+
 </head>
 <body>
     <!-- Encabezado principal -->
@@ -61,7 +68,7 @@
       <section id="hero">
         <div class="hero-content">
           <div class="md-typescale-display-medium">¿Qué tienes en mente el día de hoy?</div>
-          <div class="surface surface-1 search-bar">
+          <div class="surface surface-1 search-bar surface-hovered">
             <md-elevation></md-elevation>
             <md-icon-button><md-icon>filter_alt</md-icon></md-icon-button>
             <input type="search" id="input-search" name="input-search" placeholder="Un libro cualquiera primera edicion"/>      
@@ -74,43 +81,43 @@
       <section id="servicio-1">
         <div class="surface servicio-surface row">
           <md-elevation></md-elevation>
-          <div class="servicio-1-1 column">
-            <div class="md-typescale-headline-large" style="margin-bottom: 45px;">¿QUÉ NOS HACE FALTA?</div>
+          <div class="servicio-1-1 column column-1">
+            <div class="md-typescale-headline-large">¿QUÉ NOS HACE FALTA?</div>
             <md-filled-icon-button>
-              <md-icon style="margin-right: 5px;" >add_shopping_cart</md-icon>Sugerir compra
+              <md-icon>add_shopping_cart</md-icon>Sugerir compra
             </md-filled-icon-button>
           </div>
-          <div class="servicio-1-2 column">
+          <div style="align-items: center;" class="servicio-1-2 column column-2">
             <div class="md-typescale-headline-large">DISPONEMOS DE...</div>
             <div class="servicio-1-2-1 row ">
-              <div class="mini-card surface">
+              <div class="mini-card surface surface-hovered">
                 <md-elevation></md-elevation>
                 <div class="card-icon">
                   <img src="./public/images/recursos digitales.svg" width="80px"/>
                </div>
                 <div class="card-content">
-                    <div class="card-number">35,718</div>
-                    <div class="card-text">Recursos Digitales</div>
+                    <div class="md-typescale-title-medium">35,718</div>
+                    <div class="md-typescale-body-large">Recursos Digitales</div>
                 </div>
               </div>
-              <div class="mini-card surface">
+              <div class="mini-card surface surface-hovered">
                 <md-elevation></md-elevation>
                 <div class="card-icon">
                   <img src="./public/images/recursos fisicos.svg" width="80px"/>
                </div>
                 <div class="card-content">
-                    <div class="card-number">27,417</div>
-                    <div class="card-text">Recursos Impresos</div>
+                  <div class="md-typescale-title-medium">27,417</div>
+                  <div class="md-typescale-body-large">Recursos Impresos</div>
                 </div>
               </div>
-              <div class="mini-card surface">
+              <div class="mini-card surface surface-hovered">
                 <md-elevation></md-elevation>
                 <div class="card-icon">
                   <img src="./public/images/espacios_estudio.svg" width="80px"/>
                </div>
                 <div class="card-content">
-                    <div class="card-number">45</div>
-                    <div class="card-text">Espacios de Estudio</div>
+                    <div class="md-typescale-title-medium">45</div>
+                    <div class="md-typescale-body-large">Espacios de Estudio</div>
                 </div>
               </div>
             </div>
@@ -121,23 +128,71 @@
       <section id="nuevas-adquisiciones">
         <div class="surface adquisiciones-surface row">
           <md-elevation></md-elevation>
-          <div class="adquisiciones-1 column">
+          <div class="adquisiciones-1 column-1 column">
             <div class="md-typescale-headline-large">NUEVAS ADQUISICIONES</div>
+            <div class="md-typescale-body-large">Descubre los horizontes que te esperan en cada página.
+               ¡Explora nuestras últimas colecciones!</div>
+
             <md-filled-icon-button>
               <md-icon style="margin-right: 5px;" >add</md-icon>Ver lista completa  
             </md-filled-icon-button>
           </div>
-          <div class="adquisiciones-2 column">
-            <div class="adquisiciones-2-1 row">
-              <p>carrusel de cards</p>
-            </div>
-            <md-slider></md-slider>
+
+          <div  class="adquisiciones-2 column  column-2">
+              <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                      <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+                      <book-card title="El despertar de los titanes" author="Otro autor" chip-label="físico" icon="bookmark" image-url="/public/images/PortadasLibros/PortadaLibro2.jpeg" star1="true" star2="true" star3="false" star4="false" star5="false"></book-card>
+                      <book-card title="La era de las sombras" author="Tercer autor" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro3.jpeg" star1="true" star2="true" star3="true" star4="true" star5="true"></book-card>
+                      <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+                      <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+                      <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+                      <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+                      <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>  
+                      <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>  
+                      <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>  
+                      <!-- Agrega más elementos book-card según sea necesario -->
+                </div>
+                <div class="slider-container">
+                  <md-slider id="carousel-slider" style="width: 100%;"step="20" ticks min="0" max="100"></md-slider>
+                </div>
+              </div>
             
+             
           </div>
 
         </div>
       </section>
 
+      
+      <div class="card-book surface">
+        <md-elevation></md-elevation>
+        <div class="card-book-content">
+          <div class="card-media"></div>
+          <div class="card-content">
+            <div class="calification">
+              <md-icon filled>grade</md-icon>
+              <md-icon filled>grade</md-icon>
+              <md-icon filled>grade</md-icon>
+              <md-icon filled>grade</md-icon>
+              <md-icon filled>grade</md-icon>
+            </div>
+            <div class="text-content">
+              <div style="word-wrap: normal;" class="md-typescale-title-medium">Reyes Caídoaídos de la noche sin luns</div>
+              <div class="md-typescale-body-large">Autor del libro</div>
+            </div>
+            <md-assist-chip class="" label="digital" style="width: fit-content;"></md-assist-chip>
+            <div class="acceso-rapido">
+              <md-icon-button><md-icon>visibility</md-icon></md-icon-button>
+              <md-icon-button><md-icon>grade</md-icon></md-icon-button>
+              <md-icon-button><md-icon>share</md-icon></md-icon-button>
+              <md-icon-button><md-icon>quick_reference</md-icon></md-icon-button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
       <div class="mdc-typography">
         <body>
           <div class="md-typescale-display-large">Display Large</div>
@@ -156,9 +211,31 @@
           <div class="md-typescale-body-medium">Body Medium</div>
           <div class="md-typescale-body-small">Body Small</div>
       </body>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+      <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+      <book-card title="Reyes Caídos" author="Autor del libro" chip-label="Físico" icon="bookmark" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg"></book-card>
     </div>
 
-
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+            <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+            <book-card title="El despertar de los titanes" author="Otro autor" chip-label="físico" icon="bookmark" image-url="/public/images/PortadasLibros/PortadaLibro2.jpeg" star1="true" star2="true" star3="false" star4="false" star5="false"></book-card>
+            <book-card title="La era de las sombras" author="Tercer autor" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro3.jpeg" star1="true" star2="true" star3="true" star4="true" star5="true"></book-card>
+            <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+            <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+            <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+            <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>
+            <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>  
+            <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>  
+            <book-card title="Reyes Caídos de la noche sin luna" author="Autor del libro" chip-label="digital" icon="visibility" image-url="/public/images/PortadasLibros/PortadaLibro1.jpeg" star1="true" star2="true" star3="true" star4="false" star5="false"></book-card>  
+            <!-- Agrega más elementos book-card según sea necesario -->
+      </div>
+    </div>
+    <div class="slider-container">
+      <md-slider id="carousel-slider" style="width: 100%;"step="20" ticks min="0" max="100"></md-slider>
+  </div>
       
     </main>
 
