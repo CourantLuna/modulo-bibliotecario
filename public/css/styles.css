@@ -39,7 +39,7 @@ body {
     
 }
   #hero {
-    background: url('public/images/library.png') no-repeat center center/cover;
+    background: url('https://github.com/CourantLuna/modulo-bibliotecario/blob/main/public/images/library.png') no-repeat center center/cover;
     height: 500px;
     display: flex;
     flex-direction: column;
